@@ -278,26 +278,48 @@ var greaterthen = function(a,b) {
    * @param {number} y
    * @return {number} the smallest number
    */
-  
+   function smallestvalue(x,y) {
+    if (x < y) {
+      return x;
+    }
+    else if ( y < x) {
+      return y;
+    }
+  }
   /**
    * Returns the largest value of two numbers.
    * @param {number} x
    * @param {number} y
    * @return {number} the largest number
    */
-  
+   function largestvalue(x,y) {
+    if (x > y) {
+      return x;
+    }
+    else if ( y > x) {
+      return y;
+    }
+  }
   /**
    * Returns true if `n` is even.
    * @param {number} n
    * @return {boolean} the number is even
    */
-  
+   function ifeven(n) {
+    if (n%2==0) {
+      return true;
+    }
+  }
   /**
    * Returns true if `n` is odd.
    * @param {number} n
    * @return {boolean} the number is odd
    */
-  
+   function ifodd(n) {
+    if (n%2==1) {
+      return true;
+    }
+  }
   /**
    * Returns a letter grade.
    * "A": 90-100%
@@ -309,10 +331,34 @@ var greaterthen = function(a,b) {
    * @param {number} total maximum possible score
    * @return {string} the score represented as a letter grade
    */
+   function lettergrade(marks,totalmarks) {
+    var percentage = marks/totalmarks*100;
+    switch(true){
+      case (percentage<=100 && percentage>=90):
+      alert("A");
+      break;
+      case (percentage<=89 && percentage>=80):
+      alert("B");
+      break;
+      case (percentage<=79 && percentage>=70):
+      alert("C");
+      break;
+      case (percentage<=69 && percentage>=60):
+      alert("D");
+      break;
+      case (percentage<=50 && percentage>=0):
+      alert("F");
+      break;
   
+    }
+  }
   /**
    * Joins two strings with a space.
    * @param {string} word1
    * @param {string} word2
    * @return {string} joined the words joined with a space
    */
+
+   function param(word1,word2) {
+    return (word1+" "+word2);
+}
